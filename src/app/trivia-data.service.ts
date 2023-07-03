@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from "rxjs";
 import {AppConstants} from './app.constants';
-import {TriviaCategories} from "./trivia-categories";
-import {QuestionsList} from "./questions-list";
-import {Question} from "./question";
-import {TriviaCategory} from "./trivia-category";
+import {TriviaCategories} from "../models/trivia-categories";
+import {QuestionsList} from "../models/questions-list";
+import {Question} from "../models/question";
+import {TriviaCategory} from "../models/trivia-category";
 @Injectable({
   providedIn: 'root'
 })

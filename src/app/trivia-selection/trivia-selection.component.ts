@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TriviaDataService} from "../trivia-data.service";
 import {AppConstants} from "../app.constants";
-import {Difficulty} from "../difficulty";
-import {TriviaCategories} from "../trivia-categories";
-import {TriviaCategory } from "../trivia-category";
+import {Difficulty} from "../../models/difficulty";
+import {TriviaCategories} from "../../models/trivia-categories";
+import {TriviaCategory } from "../../models/trivia-category";
 
 @Component({
   selector: 'app-trivia-selection',
@@ -11,7 +11,7 @@ import {TriviaCategory } from "../trivia-category";
   styleUrls: ['./trivia-selection.component.scss']
 })
 
-export class TriviaSelectionComponent {
+export class TriviaSelectionComponent implements OnInit{
   protected readonly AppConstants = AppConstants;
   protected readonly Difficulty = Difficulty;
   categories : TriviaCategory[];

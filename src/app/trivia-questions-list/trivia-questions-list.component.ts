@@ -1,7 +1,7 @@
-import {Component, HostListener, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {TriviaDataService} from "../trivia-data.service";
-import {QuestionsList} from "../questions-list";
-import {Question} from "../question";
+import {QuestionsList} from "../../models/questions-list";
+import {Question} from "../../models/question";
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   templateUrl: './trivia-questions-list.component.html',
   styleUrls: ['./trivia-questions-list.component.scss']
 })
-export class TriviaQuestionsListComponent {
+export class TriviaQuestionsListComponent implements OnInit{
 
   @Input() category : string;
   @Input() difficulty : string;
@@ -54,7 +54,7 @@ export class TriviaQuestionsListComponent {
   }
 
   validateIfAllQuestionsAnswered(){
-    let validateAnswers : boolean[]=[];
+    const validateAnswers : boolean[]=[];
     this.questions.forEach((question)=>{
       validateAnswers.push(question.isAnswered);
     });
@@ -63,7 +63,6 @@ export class TriviaQuestionsListComponent {
   navigateToResults(){
     this.dataService.setAnsweredQuestions(this.questions);
     this.showQuestionsList = false;
-    debugger;
-    this.router.navigate(['quiz-results']).then(r => console.log("Navigated"));
+    this.router.navigate(['quiz-results']).then(r => console.log("Navigated" +r));
   }
 }

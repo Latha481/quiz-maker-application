@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Question} from "../question";
+import {Question} from "../../models/question";
 import {TriviaDataService} from "../trivia-data.service";
 import {AppConstants} from "../app.constants";
 import {Router} from "@angular/router";
@@ -18,7 +18,6 @@ export class QuizResultsComponent implements OnInit{
   }
   ngOnInit(): void {
     this.answeredQuestions = this.dataService.getAnsweredQuestions();
-    debugger;
     if(this.answeredQuestions == undefined) {
       //in case route is directly activated
       this.navigateToSelection();
@@ -28,7 +27,7 @@ export class QuizResultsComponent implements OnInit{
 
   navigateToSelection(){
     this.dataService.setAnsweredQuestions([]);
-    this.router.navigate(['']).then(r => console.log("Navigated to selection screen"));
+    this.router.navigate(['']).then(r => console.log("Navigated to selection screen" + r));
   }
   setColorCoding(question: Question, choice : string ){
     if(choice == question.correct_answer){
