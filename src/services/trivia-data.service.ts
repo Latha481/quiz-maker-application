@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from "rxjs";
-import {AppConstants} from './app.constants';
+import {AppConstants} from '../app/app.constants';
 import {TriviaCategories} from "../models/trivia-categories";
 import {QuestionsList} from "../models/questions-list";
 import {Question} from "../models/question";

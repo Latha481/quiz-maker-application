@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TriviaDataService} from "../trivia-data.service";
+import {TriviaDataService} from "../../services/trivia-data.service";
 import {AppConstants} from "../app.constants";
 import {Difficulty} from "../../models/difficulty";
 import {TriviaCategories} from "../../models/trivia-categories";

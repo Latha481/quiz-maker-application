@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TriviaDataService} from "../trivia-data.service";
+import {TriviaDataService} from "../../services/trivia-data.service";
 import {QuestionsList} from "../../models/questions-list";
 import {Question} from "../../models/question";
 import {Router} from "@angular/router";

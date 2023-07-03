@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Question} from "../../models/question";
-import {TriviaDataService} from "../trivia-data.service";
+import {TriviaDataService} from "../../services/trivia-data.service";
 import {AppConstants} from "../app.constants";
 import {Router} from "@angular/router";
-
 @Component({
   selector: 'app-quiz-results',
   templateUrl: './quiz-results.component.html',
