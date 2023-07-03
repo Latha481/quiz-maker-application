@@ -4,8 +4,9 @@ import {TriviaSelectionComponent} from "./trivia-selection/trivia-selection.comp
 import {QuizResultsComponent} from "./quiz-results/quiz-results.component";
 
 const routes: Routes = [
-  {path : '' , component : TriviaSelectionComponent},
-  {path : 'quiz-results' , component : QuizResultsComponent}
+  {path : 'trivia-selection' , component : TriviaSelectionComponent},
+  {path : 'quiz-results' , component : QuizResultsComponent},
+  {path: '', redirectTo: '/trivia-selection', pathMatch: 'full' }
 ];
 
 @NgModule({
