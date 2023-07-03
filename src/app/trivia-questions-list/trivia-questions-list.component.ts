@@ -63,6 +63,7 @@ export class TriviaQuestionsListComponent {
   navigateToResults(){
     this.dataService.setAnsweredQuestions(this.questions);
     this.showQuestionsList = false;
+    debugger;
     this.router.navigate(['quiz-results']).then(r => console.log("Navigated"));
   }
 }
