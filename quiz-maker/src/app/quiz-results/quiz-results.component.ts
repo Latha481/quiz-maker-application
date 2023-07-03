@@ -19,7 +19,6 @@ export class QuizResultsComponent implements OnInit{
   ngOnInit(): void {
     this.answeredQuestions = this.dataService.getAnsweredQuestions();
     if(this.answeredQuestions == undefined) {
-      debugger;
       //in case route is directly activated
       this.navigateToSelection();
     }
